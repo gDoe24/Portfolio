@@ -1,0 +1,190 @@
+.hero-banner{
+    height: 50vh;
+    width: 99vw;
+    margin: 0;
+    z-index: -5;
+    position: relative;
+    text-align: left;
+    
+    .intro{
+        position: absolute;
+        z-index: 2;
+        top: 25%;
+        left: 10%;
+        #welcome{
+            margin: 0;
+            padding: 0;
+            color: #5214E6;
+        }
+        #name{
+            color: #4CC9F0;
+            margin: 0;
+            padding: 0;
+        }
+        #developer{
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    .overlay{
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left bottom, rgba(0,0,0,0), rgba(0,0,0, .4)),
+                    linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.2));
+    }
+    .background{
+        height: 120%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        object-fit: cover;
+        filter: blur(1px);
+    }
+    .background-rock{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 25%;
+        object-fit: contain;
+    }
+    .background-man{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 20%;
+        object-fit: contain;
+    }
+}
+
+
+@media screen and (min-width:992px) and (max-width: 1399px){
+    .hero-banner{
+        height: 100vh;
+        width: 99vw;
+        margin: 0;
+        padding: 0;
+        .intro{
+            top: 25%;
+            left: 20%;
+            width: 40%;
+            #welcome{
+                margin: 0;
+                padding: 0;
+                color: #5214E6;
+                font-size: 3em;
+            }
+            #name{
+                color: #4CC9F0;
+                margin: 0;
+                padding: 0;
+                font-size: 2em;
+            }
+            #developer{
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-size: 1.5em;
+            }
+        }
+        .background{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            filter: blur(2px);
+        }
+        .background-rock{
+            height: 110%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: -5%;
+            transform: translate(0,0);
+            object-fit: fill;
+        }
+        .background-man{
+            height: 105%;
+            width: 99%;
+            position: absolute;
+            left: 0;
+            top: -5%;
+            transform: translate(0,0);
+            object-fit: fill;
+        }
+    }
+}
+@media screen and (min-width:1400px){
+    .hero-banner{
+        height: 100vh;
+        width: 99vw;
+        z-index: -5;
+        position: relative;
+        .intro{
+            position: absolute;
+            top: 25%;
+            left: 20%;
+            width: 40%;
+            #welcome{
+                margin: 0;
+                padding: 0;
+                color: #5214E6;
+                font-size: 4em;
+            }
+            #name{
+                color: #4CC9F0;
+                margin: 0;
+                padding: 0;
+                font-size: 2em;
+            }
+            #developer{
+                color: white;
+                margin: 0;
+                padding: 0;
+                font-size: 1.5em;
+            }
+        }
+        .background{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            object-fit: cover;
+            filter: blur(2.5px);
+        }
+        .background-rock{
+            height: 110%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: -5%;
+            transform: translate(0,0);
+            object-fit: fill;
+        }
+        .background-man{
+            height: 105%;
+            width: 99%;
+            position: absolute;
+            left: 0;
+            top: -5%;
+            transform: translate(0,0);
+            object-fit: fill;
+        }
+    }
+}
+
+// ABOUT ME
+.about-me{
+    height: 60vh;
+    width: 99vw;
+    background-color: grey;
+    backdrop-filter: blur(20px);
+}
+
+// PROJECTS
