@@ -2,9 +2,11 @@
     height: 50vh;
     width: 99vw;
     margin: 0;
-    z-index: -5;
     position: relative;
     text-align: left;
+    img{
+        z-index: -5;
+    }
     
     .intro{
         position: absolute;
@@ -60,6 +62,14 @@
         left: 0;
         top: 20%;
         object-fit: contain;
+    }
+    .bottom-blur{
+        height: 5%;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: grey;
+        filter: blur(30px);
     }
 }
 
@@ -157,6 +167,7 @@
             left: 0;
             object-fit: cover;
             filter: blur(2.5px);
+            background-attachment: fixed;
         }
         .background-rock{
             height: 110%;
@@ -182,9 +193,11 @@
 // ABOUT ME
 .about-me{
     height: 60vh;
-    width: 99vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     background-color: grey;
-    backdrop-filter: blur(20px);
+    z-index: 1;
 }
 
 // PROJECTS
