@@ -1,33 +1,12 @@
 import React, { useEffect } from 'react';
+import BG from "../../../public/BG.png";
+import rock from "../../../public/rock.png";
+import man from "../../../public/man.png";
+
 
 export default function Cover(){
 
-
-    const handleScrollBG = (element, yPos) => {
-        let item = document.querySelector(element);
-        item.style.transform = `translateY(${yPos}px)`;
-    }
-    const handleScrollEl = (element, yPos,) => {
-        let item = document.querySelector(element);
-        item.style.transform = `translateY(-${yPos}px)`;
-    }
-
-    let yScrollPosition;
-
-    function scrollLoop(){
-        
-        yScrollPosition = window.pageYOffset;
-        handleScrollBG('.hero-banner', yScrollPosition * 1);
-        handleScrollEl('.intro', yScrollPosition * .6);
-        handleScrollEl('.background-rock', yScrollPosition * .6);
-        handleScrollEl('.background-man', yScrollPosition * .4);
-
-        requestAnimationFrame(scrollLoop);
-    }
-    
-    useEffect(() => {
-        window.addEventListener("scroll", scrollLoop);
-    })
+    const t1 = gsap.timeline();
 
     return (
         <div 
@@ -41,15 +20,15 @@ export default function Cover(){
             <img 
                 className="background"
                 alt="background"
-                src={`${process.env.PUBLIC_URL}/BG.png`}/>
+                src={BG}/>
             <img 
                 className="background-rock"
                 alt="background rock"
-                src={`${process.env.PUBLIC_URL}/rock.png`}/>
+                src={rock}/>
             <img 
                 className="background-man"
                 alt="background man"
-                src={`${process.env.PUBLIC_URL}/man.png`}/>
+                src={man}/>
         </div>
     )
 }

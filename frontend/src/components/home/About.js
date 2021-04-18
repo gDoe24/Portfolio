@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About(){
     return (
-        <section className="about-me">
+        <section className="row flex-direction-reverse">
         </section>
     )
 }
