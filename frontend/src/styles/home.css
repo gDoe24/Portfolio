@@ -190,6 +190,7 @@
     -webkit-filter: blur(2.5px);
             filter: blur(2.5px);
     background-attachment: fixed;
+    z-index: -5;
   }
   .hero-banner .background-rock {
     height: 110%;
@@ -216,7 +217,8 @@
 }
 
 .about-me {
-  height: 60vh;
+  position: absolute;
+  height: 100vh;
   width: 100%;
   margin: 0;
   padding: 0;

@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = function(_env, argv) {
   const isProduction = argv.mode === "production";
@@ -10,13 +11,14 @@ module.exports = function(_env, argv) {
 
 
   return {
-    devtool: isDevelopment && "cheap-module-source-map",
+    devtool: isDevelopment && "inline-source-map",
     entry: "./src/index.js",
     output: {
         filename: "assets/js/[name].js",
         path: path.resolve(__dirname, "dist"),
         publicPath: "/"
     },
+    
     module: {
         rules: [
             {
@@ -60,7 +62,20 @@ module.exports = function(_env, argv) {
         resolve: {
             extensions: [".js", ".jsx"]
         },
+        devServer: {
+            compress: true,
+            historyApiFallback: true,
+            port: 3000,
+            open: true,
+            hotOnly: true,
+            overlay: true,
+            contentBase: './dist'
+        },
         plugins: [
+            new HtmlWebpackPlugin({
+                filename: "index.html",
+                template: "./src/index.html"
+            }),
             isProduction &&
             new MiniCssExtractPlugin({
                 filename: "assets/css/[name].[contenthash:8].css",
@@ -74,10 +89,7 @@ module.exports = function(_env, argv) {
             new webpack.ProvidePlugin({
                 "React": "react",
               }),
-            new HtmlWebpackPlugin({
-                filename: "index.html",
-                template: "./src/index.html"
-            })
+            new webpack.HotModuleReplacementPlugin()
         ].filter(Boolean),
         optimization: {
             minimize: isProduction,
@@ -101,13 +113,6 @@ module.exports = function(_env, argv) {
                 ],
                 runtimeChunk: "single"
         },
-        devServer: {
-            compress: true,
-            historyApiFallback: true,
-            port: 3000,
-            open: true,
-            overlay: true,
-            contentBase: './dist'
-        }
+       
     };
 };

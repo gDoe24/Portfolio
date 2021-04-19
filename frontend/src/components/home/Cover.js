@@ -6,11 +6,28 @@ import man from "../../../public/man.png";
 
 export default function Cover(){
 
-    const t1 = gsap.timeline();
+    
+    let timeline = new TimelineMax();
+    let controller = new ScrollMagic.Controller();
 
+    useEffect(() => {
+        timeline
+        .to('.background-rock', 3, {y: -300})
+        .to('.background-man', 3, {y: -200}, '-=3')
+        .to('.background', 3, {y: 50}, '-=3')
+        .to('.about-me', 3, {top: 0}, '-=3');
+        let scene = new ScrollMagic.Scene({
+            triggerElement: "section",
+            duration: "100%",
+            triggerHook: 0,
+        })
+        .setTween(timeline)
+        .setPin(".about-me")
+        .addTo(controller)
+    },[])
+    
     return (
-        <div 
-            className="hero-banner">
+        <section className="hero-banner">
             <div className="intro">
                 <h2 id="name">My Name is Greg</h2>
                 <h3 id="developer">Software Developer</h3>
@@ -29,6 +46,6 @@ export default function Cover(){
                 className="background-man"
                 alt="background man"
                 src={man}/>
-        </div>
+        </section>
     )
 }
