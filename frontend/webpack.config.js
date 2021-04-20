@@ -2,6 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = function(_env, argv) {
   const isProduction = argv.mode === "production";
@@ -9,8 +10,8 @@ module.exports = function(_env, argv) {
   const TerserWebpackPlugin = require("terser-webpack-plugin");
   const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-
   return {
+    target:'web',
     devtool: isDevelopment && "inline-source-map",
     entry: "./src/index.js",
     output: {
@@ -18,7 +19,6 @@ module.exports = function(_env, argv) {
         path: path.resolve(__dirname, "dist"),
         publicPath: "/"
     },
-    
     module: {
         rules: [
             {
@@ -26,11 +26,6 @@ module.exports = function(_env, argv) {
                 exclude: /node_modules/,
                 use: {
                       loader: "babel-loader",
-                      options: {
-                          cacheDirectory: true,
-                          cacheCompression: false,
-                          envName: isProduction ? "production" : "development"
-                        }
                     }
             },
             {
@@ -67,7 +62,7 @@ module.exports = function(_env, argv) {
             historyApiFallback: true,
             port: 3000,
             open: true,
-            hotOnly: true,
+            hot: true,
             overlay: true,
             contentBase: './dist'
         },
@@ -89,7 +84,8 @@ module.exports = function(_env, argv) {
             new webpack.ProvidePlugin({
                 "React": "react",
               }),
-            new webpack.HotModuleReplacementPlugin()
+            new webpack.HotModuleReplacementPlugin(),
+            new ReactRefreshWebpackPlugin()
         ].filter(Boolean),
         optimization: {
             minimize: isProduction,
