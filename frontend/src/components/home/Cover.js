@@ -9,7 +9,7 @@ export default function Cover(){
     return (
         <section className="hero-banner">
             <div className="intro">
-                <h2 id="name">My Name is Genius</h2>
+                <h2 id="name">My Name is Greg</h2>
                 <h3 id="developer">Software Developer</h3>
                 <h1 id="welcome">Welcome to My Portfolio</h1>
             </div>

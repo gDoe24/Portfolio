@@ -22,8 +22,11 @@
 .hero-banner .intro {
   position: absolute;
   z-index: 2;
-  top: 25%;
-  left: 10%;
+  top: 35%;
+  left: 15%;
+  width: 60%;
+  -webkit-transform: translate(0, 5%);
+          transform: translate(0, 5%);
 }
 
 .hero-banner .intro #welcome {
@@ -75,7 +78,7 @@
   width: 100%;
   position: absolute;
   left: 0;
-  top: 30%;
+  top: 25%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -85,7 +88,7 @@
   width: 100%;
   position: absolute;
   left: 0;
-  top: 20%;
+  top: 22%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -110,61 +113,96 @@
   z-index: 5;
 }
 
-@media screen and (min-width: 992px) and (max-width: 1399px) {
-  .hero-banner {
-    margin: 0;
-    padding: 0;
-  }
+@media (min-width: 576px) {
   .hero-banner .intro {
     top: 25%;
-    left: 20%;
-    width: 40%;
+    left: 15%;
+    width: 50%;
   }
   .hero-banner .intro #welcome {
-    margin: 0;
-    padding: 0;
-    color: #5214E6;
-    font-size: 3em;
+    font-size: 2.5em;
   }
   .hero-banner .intro #name {
-    color: #4CC9F0;
-    margin: 0;
-    padding: 0;
     font-size: 2em;
   }
   .hero-banner .intro #developer {
-    color: white;
-    margin: 0;
-    padding: 0;
     font-size: 1.5em;
   }
-  .hero-banner .background {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    -webkit-filter: blur(2px);
-            filter: blur(2px);
-  }
   .hero-banner .background-rock {
-    height: 110%;
-    width: 100%;
     position: absolute;
     left: 0;
-    top: -5%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    top: 10%;
     -o-object-fit: fill;
        object-fit: fill;
   }
   .hero-banner .background-man {
-    height: 105%;
-    width: 99%;
     position: absolute;
     left: 0;
-    top: -5%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    top: 10%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-banner .intro {
+    top: 25%;
+    left: 15%;
+    width: 50%;
+  }
+  .hero-banner .intro #welcome {
+    font-size: 2.5em;
+  }
+  .hero-banner .intro #name {
+    font-size: 2em;
+  }
+  .hero-banner .intro #developer {
+    font-size: 1.5em;
+  }
+  .hero-banner .background-rock {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .hero-banner .background-man {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .hero-banner .intro {
+    top: 30%;
+    left: 30%;
+    width: 35%;
+    -webkit-transform: translate(-30%, -30%);
+            transform: translate(-30%, -30%);
+  }
+  .hero-banner .intro #welcome {
+    font-size: 2.5em;
+  }
+  .hero-banner .intro #name {
+    font-size: 2em;
+  }
+  .hero-banner .intro #developer {
+    font-size: 1.5em;
+  }
+  .hero-banner .background-rock {
+    position: absolute;
+    left: 0;
+    top: 7.5%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .hero-banner .background-man {
+    position: absolute;
+    left: 0;
+    top: 5%;
     -o-object-fit: fill;
        object-fit: fill;
   }
@@ -172,59 +210,40 @@
 
 @media screen and (min-width: 1400px) {
   .container .hero-banner .intro {
-    position: absolute;
-    top: 25%;
-    left: 20%;
+    top: 15%;
+    left: 15%;
     width: 40%;
+    -webkit-transform: translate(15%, 15%);
+            transform: translate(15%, 15%);
   }
   .container .hero-banner .intro #welcome {
-    margin: 0;
-    padding: 0;
-    color: #5214E6;
     font-size: 4em;
   }
   .container .hero-banner .intro #name {
-    color: #4CC9F0;
-    margin: 0;
-    padding: 0;
     font-size: 2em;
   }
   .container .hero-banner .intro #developer {
-    color: white;
-    margin: 0;
-    padding: 0;
     font-size: 1.5em;
   }
   .container .hero-banner .background {
     height: 100%;
     width: 100%;
-    position: absolute;
-    left: 0;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-filter: blur(2.5px);
-            filter: blur(2.5px);
     background-attachment: fixed;
   }
   .container .hero-banner .background-rock {
     height: 100%;
     width: 100%;
-    position: absolute;
     left: 0;
     top: 7.5%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
     -o-object-fit: fill;
        object-fit: fill;
   }
   .container .hero-banner .background-man {
     height: 100%;
     width: 99%;
-    position: absolute;
-    left: 0;
     top: 5%;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
     -o-object-fit: fill;
        object-fit: fill;
   }

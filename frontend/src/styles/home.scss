@@ -19,8 +19,10 @@
     .intro{
         position: absolute;
         z-index: 2;
-        top: 25%;
-        left: 10%;
+        top: 35%;
+        left: 15%;
+        width:60%;
+        transform: translate(0,5%);
         #welcome{
             margin: 0;
             padding: 0;
@@ -63,7 +65,7 @@
         width: 100%;
         position: absolute;
         left: 0;
-        top: 30%;
+        top: 25%;
         object-fit: contain;
     }
     .background-man{
@@ -71,7 +73,7 @@
         width: 100%;
         position: absolute;
         left: 0;
-        top: 20%;
+        top: 22%;
         object-fit: contain;
     }
     .bottom-blur{
@@ -93,56 +95,93 @@
     z-index: 5;
 }
 
-@media screen and (min-width:992px) and (max-width: 1399px){
+@media (min-width: 576px) { 
     .hero-banner{
-        margin: 0;
-        padding: 0;
         .intro{
             top: 25%;
-            left: 20%;
-            width: 40%;
+            left: 15%;
+            width: 50%;
             #welcome{
-                margin: 0;
-                padding: 0;
-                color: #5214E6;
-                font-size: 3em;
+                font-size: 2.5em;
             }
             #name{
-                color: #4CC9F0;
-                margin: 0;
-                padding: 0;
                 font-size: 2em;
             }
             #developer{
-                color: white;
-                margin: 0;
-                padding: 0;
                 font-size: 1.5em;
             }
         }
-        .background{
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            left: 0;
-            filter: blur(2px);
-        }
         .background-rock{
-            height: 110%;
-            width: 100%;
             position: absolute;
             left: 0;
-            top: -5%;
-            transform: translate(0,0);
+            top: 10%;
             object-fit: fill;
         }
         .background-man{
-            height: 105%;
-            width: 99%;
             position: absolute;
             left: 0;
-            top: -5%;
-            transform: translate(0,0);
+            top: 10%;
+            object-fit: fill;
+        }
+    }
+ }
+@media (min-width: 768px) { 
+    .hero-banner{
+        .intro{
+            top: 25%;
+            left: 15%;
+            width: 50%;
+            #welcome{
+                font-size: 2.5em;
+            }
+            #name{
+                font-size: 2em;
+            }
+            #developer{
+                font-size: 1.5em;
+            }
+        }
+        .background-rock{
+            position: absolute;
+            left: 0;
+            top: 10%;
+            object-fit: fill;
+        }
+        .background-man{
+            position: absolute;
+            left: 0;
+            top: 10%;
+            object-fit: fill;
+        }
+    }
+ }
+@media screen and (min-width:992px) and (max-width: 1399px){
+    .hero-banner{
+        .intro{
+            top: 30%;
+            left: 30%;
+            width: 35%;
+            transform: translate(-30%, -30%);
+            #welcome{
+                font-size: 2.5em;
+            }
+            #name{
+                font-size: 2em;
+            }
+            #developer{
+                font-size: 1.5em;
+            }
+        }
+        .background-rock{
+            position: absolute;
+            left: 0;
+            top: 7.5%;
+            object-fit: fill;
+        }
+        .background-man{
+            position: absolute;
+            left: 0;
+            top: 5%;
             object-fit: fill;
         }
     }
@@ -151,60 +190,77 @@
     .container{
         .hero-banner{
             .intro{
-                position: absolute;
-                top: 25%;
-                left: 20%;
+                top: 15%;
+                left: 15%;
                 width: 40%;
+                transform: translate(15%,15%);
                 #welcome{
-                    margin: 0;
-                    padding: 0;
-                    color: #5214E6;
                     font-size: 4em;
                 }
                 #name{
-                    color: #4CC9F0;
-                    margin: 0;
-                    padding: 0;
                     font-size: 2em;
                 }
                 #developer{
-                    color: white;
-                    margin: 0;
-                    padding: 0;
                     font-size: 1.5em;
                 }
             }
             .background{
                 height: 100%;
                 width: 100%;
-                position: absolute;
-                left: 0;
                 object-fit: cover;
-                filter: blur(2.5px);
                 background-attachment: fixed;
             }
             .background-rock{
                 height: 100%;
                 width: 100%;
-                position: absolute;
                 left: 0;
                 top: 7.5%;
-                transform: translate(0,0);
                 object-fit: fill;
             }
             .background-man{
                 height: 100%;
                 width: 99%;
-                position: absolute;
-                left: 0;
                 top: 5%;
-                transform: translate(0,0);
                 object-fit: fill;
             }
         }
     }
 }
+// IPAD
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
 
+}
+
+// IPAD LANDSCAPE
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+// IPAD PRO PORTRAIT
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+// IPAD PRO LANDSCAPE
+
+@media only screen 
+  and (min-device-width: 1366px) 
+  and (max-device-width: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
 
 
 // PROJECTS
