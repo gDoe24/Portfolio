@@ -60,6 +60,7 @@
 
 .hero-banner .cover-container {
   height: 100vh;
+  margin: 0;
 }
 
 .hero-banner .background {
@@ -244,6 +245,78 @@
     height: 100%;
     width: 99%;
     top: 5%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .container .hero-banner .intro {
+    top: 20%;
+    left: 10%;
+    width: 50%;
+    -webkit-transform: translate(5%, 15%);
+            transform: translate(5%, 15%);
+  }
+  .container .hero-banner .intro #welcome {
+    font-size: 3em;
+  }
+  .container .hero-banner .intro #name {
+    font-size: 2.5em;
+  }
+  .container .hero-banner .intro #developer {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .container .hero-banner .intro #welcome {
+    font-size: 3em;
+  }
+  .container .hero-banner .intro #name {
+    font-size: 2.5em;
+  }
+  .container .hero-banner .intro #developer {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  .container .hero-banner .intro {
+    top: 30%;
+    left: 10%;
+    width: 50%;
+    -webkit-transform: translate(10%, 0);
+            transform: translate(10%, 0);
+  }
+  .container .hero-banner .intro #welcome {
+    font-size: 3.3em;
+  }
+  .container .hero-banner .intro #name {
+    font-size: 2.8em;
+  }
+  .container .hero-banner .intro #developer {
+    font-size: 2.3em;
+  }
+  .container .hero-banner .background {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-attachment: fixed;
+  }
+  .container .hero-banner .background-rock {
+    height: 80%;
+    width: 100%;
+    left: 0;
+    top: 24%;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .container .hero-banner .background-man {
+    height: 80%;
+    width: 99%;
+    top: 22.5%;
     -o-object-fit: fill;
        object-fit: fill;
   }

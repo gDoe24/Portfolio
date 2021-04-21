@@ -51,6 +51,7 @@
     }
     .cover-container{
         height: 100vh;
+        margin: 0;
     }
     .background{
         height: 120%;
@@ -232,7 +233,25 @@
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+    .container{
+        .hero-banner{
+            .intro{
+                top: 20%;
+                left: 10%;
+                width: 50%;
+                transform: translate(5%,15%);
+                #welcome{
+                    font-size: 3em;
+                }
+                #name{
+                    font-size: 2.5em;
+                }
+                #developer{
+                    font-size: 2em;
+                }
+            }
+        }
+    }
 }
 
 // IPAD LANDSCAPE
@@ -241,7 +260,21 @@
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
-
+    .container{
+        .hero-banner{
+            .intro{
+                #welcome{
+                    font-size: 3em;
+                }
+                #name{
+                    font-size: 2.5em;
+                }
+                #developer{
+                    font-size: 2em;
+                }
+            }
+        }
+    }
 }
 // IPAD PRO PORTRAIT
 @media only screen 
@@ -249,6 +282,44 @@
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
+    .container{
+        .hero-banner{
+            .intro{
+                top: 30%;
+                left: 10%;
+                width: 50%;
+                transform: translate(10%,0);
+                #welcome{
+                    font-size: 3.3em;
+                }
+                #name{
+                    font-size: 2.8em;
+                }
+                #developer{
+                    font-size: 2.3em;
+                }
+            }
+            .background{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                background-attachment: fixed;
+            }
+            .background-rock{
+                height: 80%;
+                width: 100%;
+                left: 0;
+                top: 24%;
+                object-fit: fill;
+            }
+            .background-man{
+                height: 80%;
+                width: 99%;
+                top: 22.5%;
+                object-fit: fill;
+            }
+        }
+    }
 
 }
 
