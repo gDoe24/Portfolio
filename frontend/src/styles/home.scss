@@ -1,3 +1,10 @@
+$primary: #5214E6;
+$secondary:#4CC9F0;
+$tertiary: #6e01c0;
+
+h1{
+    color: #5214E6;
+}
 .container{
     position: relative;
     height: 100vh;
@@ -87,13 +94,66 @@
     }
 }
 // ABOUT ME
-.about-me{
-    background-color: grey;
+.about-container{
+    background-color: white;
     z-index: 4;
+    min-height: 100vh;
+    max-height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    h2{
+        color: $primary;
+    }
+    h3{
+        margin-top: 2em;
+        color: $secondary;
+    }
+    p{
+        margin-top: 1em;
+    }
+    .about-me{
+        height: 50%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+           
+        .about-info{
+            height: 50%;
+            width: 70%;
+            margin: 0 auto 0 auto;
+            padding-top: 5%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .skills-container{
+        height: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: $tertiary;
+    }
+    .skills{
+        width: 70%;
+        margin: 0 auto 0 auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h3{
+            padding-top: 5vh;
+        }
+    }
 }
-.projects{
+
+// PROJECTS
+.projects-container{
     background-color: turquoise;
     z-index: 5;
+    height: 120vh;
+    max-height: auto;
+    width: 100vw;
+    padding-top: 10vh;
 }
 
 @media (min-width: 576px) { 
@@ -186,6 +246,54 @@
             object-fit: fill;
         }
     }
+    .about-container{
+        background-color: white;
+        z-index: 4;
+        min-height: 100vh;
+        max-height: auto;
+        width: 100vw;
+        h2{
+            color: $primary;
+            font-size: 2.5em;
+        }
+        h3{
+            margin-top: 1em;
+            font-size: 1.5em;
+            color: $secondary;
+        }
+        p{
+            margin-top: 1em;
+        }
+        .about-me{
+            height: 50%;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+               
+            .about-info{
+                height: 50%;
+                width: 60%;
+                margin: 5vh auto 0 auto;
+                padding-top: 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        .skills-container{
+            background-color: white;
+            .skills{
+                width: 60%;
+                margin: 0 auto 0 auto;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                h3{
+                    padding-top: 0;
+                }
+            }
+        }
+    }
 }
 @media screen and (min-width:1400px){
     .container{
@@ -223,6 +331,55 @@
                 width: 99%;
                 top: 5%;
                 object-fit: fill;
+            }
+        }
+    }
+    // ABOUT ME
+    .about-container{
+        background-color: white;
+        z-index: 4;
+        min-height: 100vh;
+        max-height: auto;
+        width: 100vw;
+        h2{
+            color: $primary;
+            font-size: 3em;
+        }
+        h3{
+            margin-top: 2em;
+            font-size: 2em;
+            color: $secondary;
+        }
+        p{
+            margin-top: 1em;
+        }
+        .about-me{
+            height: 50%;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+               
+            .about-info{
+                height: 50%;
+                width: 60%;
+                margin: 5vh auto 0 auto;
+                padding-top: 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        .skills-container{
+            background-color: white;
+            .skills{
+                width: 60%;
+                margin: 0 auto 0 auto;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                h3{
+                    padding-top: 0;
+                }
             }
         }
     }
