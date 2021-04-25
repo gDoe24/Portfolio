@@ -101,47 +101,62 @@ h1{
     max-height: auto;
     width: 100vw;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    span{
+        color: $secondary;
+        font-size: 1rem;
+        position: relative;
+        padding-left: 45px;
+        
+        &::before{
+            content: '';
+            display: block;
+            background-color: $secondary;
+            width: 35px;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            top: calc(50% + 2px);
+            transform: translateY(-50%);
+        }
+    }
     h2{
+        margin-top: 1em;
         color: $primary;
     }
-    h3{
-        margin-top: 2em;
-        color: $secondary;
-    }
     p{
-        margin-top: 1em;
+        margin-top: 1.8em;
     }
     .about-me{
-        height: 50%;
-        width: 100%;
-        align-items: center;
-        text-align: center;
-           
+        flex: 1 1 350px;
+        display: grid;
+        place-items: center;
         .about-info{
-            height: 50%;
-            width: 70%;
+            width: 60%;
             margin: 0 auto 0 auto;
-            padding-top: 5%;
             justify-content: center;
             align-items: center;
-            text-align: center;
         }
     }
     .skills-container{
-        height: 50%;
-        justify-content: center;
-        align-items: center;
-        background-color: $tertiary;
+        flex: 1 1 350px;
+        display: grid;
+        place-items: center;
     }
     .skills{
-        width: 70%;
+        width: 60%;
         margin: 0 auto 0 auto;
         justify-content: center;
+        padding-bottom: 10%;
         align-items: center;
-        text-align: center;
-        h3{
-            padding-top: 5vh;
+        .skills-table{
+            display: grid;
+            margin-top: 3em;
+            grid-template-columns: 1fr 1fr;
+            ul{
+                list-style: none;
+            }
         }
     }
 }
@@ -252,47 +267,38 @@ h1{
         min-height: 100vh;
         max-height: auto;
         width: 100vw;
-        h2{
-            color: $primary;
-            font-size: 2.5em;
-        }
-        h3{
-            margin-top: 1em;
-            font-size: 1.5em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        span{
             color: $secondary;
+            font-size: 1rem;
+            position: relative;
+            padding-left: 45px;
+        }
+        h2{
+            font-size: 36px;
         }
         p{
-            margin-top: 1em;
+            margin-top: .8em;
         }
         .about-me{
-            height: 50%;
-            width: 100%;
-            align-items: center;
-            text-align: center;
-               
             .about-info{
-                height: 50%;
-                width: 60%;
-                margin: 5vh auto 0 auto;
-                padding-top: 0;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
+                width: 55%;
             }
         }
         .skills-container{
-            background-color: white;
             .skills{
-                width: 60%;
-                margin: 0 auto 0 auto;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                h3{
-                    padding-top: 0;
+                width: 50%;
+                padding-bottom: 20%;
+                .skills-table{
+                    display: grid;
+                    ul{
+                        list-style: none;
+                    }
                 }
             }
-        }
+    }   
     }
 }
 @media screen and (min-width:1400px){
@@ -336,49 +342,28 @@ h1{
     }
     // ABOUT ME
     .about-container{
-        background-color: white;
-        z-index: 4;
-        min-height: 100vh;
-        max-height: auto;
-        width: 100vw;
-        h2{
-            color: $primary;
-            font-size: 3em;
+        span{
+            font-size: 1rem;
         }
-        h3{
-            margin-top: 2em;
-            font-size: 2em;
-            color: $secondary;
+        h2{
+            margin-top: .8em;
+            font-size: 46px;
         }
         p{
-            margin-top: 1em;
+            margin-top: .8em;
         }
         .about-me{
-            height: 50%;
-            width: 100%;
-            align-items: center;
-            text-align: center;
-               
             .about-info{
-                height: 50%;
-                width: 60%;
-                margin: 5vh auto 0 auto;
-                padding-top: 0;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
+                width: 50%;
             }
         }
         .skills-container{
-            background-color: white;
             .skills{
-                width: 60%;
-                margin: 0 auto 0 auto;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                h3{
-                    padding-top: 0;
+                padding-bottom: 5%;
+                width: 50%;
+                .skills-table{
+                    display: grid;
+                    margin-top: 1em;
                 }
             }
         }
