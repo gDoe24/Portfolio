@@ -5,6 +5,7 @@ export default function Projects(){
         <section className="projects-container">
             <div className="projects">
                 <h2>My Projects</h2>
+                <div></div>
             </div>
         </section>
     )
