@@ -2,7 +2,31 @@ h1 {
   color: #5214E6;
 }
 
-.container {
+.btn {
+  height: 2rem;
+  width: 7rem;
+  font-size: 16px;
+  background-color: #5214E6;
+  color: white;
+  border-radius: 2px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #5214E6;
+}
+
+.btn:hover:active:focus {
+  outline: 5px auto #5214E6;
+}
+
+.home-container {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -11,7 +35,7 @@ h1 {
   overflow: hidden;
 }
 
-.container section {
+.home-container section {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -49,6 +73,10 @@ h1 {
   color: white;
   margin: 0;
   padding: 0;
+}
+
+.hero-banner .intro .cover-btn {
+  margin: 1em auto 0 auto;
 }
 
 .hero-banner .overlay {
@@ -207,6 +235,25 @@ h1 {
   list-style: none;
 }
 
+.about-container .skills .skills-table ul li {
+  position: relative;
+  margin-top: .5em;
+  padding-left: 15px;
+}
+
+.about-container .skills .skills-table ul li::before {
+  content: '';
+  display: block;
+  background-color: #5214E6;
+  width: 10px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: calc(50% + 2px);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .projects-container {
   background-color: turquoise;
   z-index: 5;
@@ -341,43 +388,48 @@ h1 {
     width: 55%;
   }
   .about-container .skills-container .skills {
-    width: 50%;
-    padding-bottom: 20%;
+    width: 60%;
+    padding-bottom: 10%;
   }
   .about-container .skills-container .skills .skills-table {
     display: -ms-grid;
     display: grid;
   }
   .about-container .skills-container .skills .skills-table ul {
-    list-style: none;
+    margin-top: 0;
+  }
+  .about-container .skills-container .skills .skills-table ul li {
+    margin-top: .5em;
+    width: 120%;
+    padding-left: 20px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .container .hero-banner .intro {
+  .home-container .hero-banner .intro {
     top: 15%;
     left: 15%;
     width: 40%;
     -webkit-transform: translate(15%, 15%);
             transform: translate(15%, 15%);
   }
-  .container .hero-banner .intro #welcome {
+  .home-container .hero-banner .intro #welcome {
     font-size: 4em;
   }
-  .container .hero-banner .intro #name {
+  .home-container .hero-banner .intro #name {
     font-size: 2em;
   }
-  .container .hero-banner .intro #developer {
+  .home-container .hero-banner .intro #developer {
     font-size: 1.5em;
   }
-  .container .hero-banner .background {
+  .home-container .hero-banner .background {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     background-attachment: fixed;
   }
-  .container .hero-banner .background-rock {
+  .home-container .hero-banner .background-rock {
     height: 100%;
     width: 100%;
     left: 0;
@@ -385,7 +437,7 @@ h1 {
     -o-object-fit: fill;
        object-fit: fill;
   }
-  .container .hero-banner .background-man {
+  .home-container .hero-banner .background-man {
     height: 100%;
     width: 99%;
     top: 5%;
@@ -414,64 +466,70 @@ h1 {
     display: grid;
     margin-top: 1em;
   }
+  .about-container .skills-container .skills .skills-table ul {
+    margin-top: 2em;
+  }
+  .about-container .skills-container .skills .skills-table ul li {
+    padding-left: 20px;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .container .hero-banner .intro {
+  .home-container .hero-banner .intro {
     top: 20%;
     left: 10%;
     width: 50%;
     -webkit-transform: translate(5%, 15%);
             transform: translate(5%, 15%);
   }
-  .container .hero-banner .intro #welcome {
+  .home-container .hero-banner .intro #welcome {
     font-size: 3em;
   }
-  .container .hero-banner .intro #name {
+  .home-container .hero-banner .intro #name {
     font-size: 2.5em;
   }
-  .container .hero-banner .intro #developer {
+  .home-container .hero-banner .intro #developer {
     font-size: 2em;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .container .hero-banner .intro #welcome {
+  .home-container .hero-banner .intro #welcome {
     font-size: 3em;
   }
-  .container .hero-banner .intro #name {
+  .home-container .hero-banner .intro #name {
     font-size: 2.5em;
   }
-  .container .hero-banner .intro #developer {
+  .home-container .hero-banner .intro #developer {
     font-size: 2em;
   }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
-  .container .hero-banner .intro {
+  .home-container .hero-banner .intro {
     top: 30%;
     left: 10%;
     width: 50%;
     -webkit-transform: translate(10%, 0);
             transform: translate(10%, 0);
   }
-  .container .hero-banner .intro #welcome {
+  .home-container .hero-banner .intro #welcome {
     font-size: 3.3em;
   }
-  .container .hero-banner .intro #name {
+  .home-container .hero-banner .intro #name {
     font-size: 2.8em;
   }
-  .container .hero-banner .intro #developer {
+  .home-container .hero-banner .intro #developer {
     font-size: 2.3em;
   }
-  .container .hero-banner .background {
+  .home-container .hero-banner .background {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     background-attachment: fixed;
   }
-  .container .hero-banner .background-rock {
+  .home-container .hero-banner .background-rock {
     height: 80%;
     width: 100%;
     left: 0;
@@ -479,7 +537,7 @@ h1 {
     -o-object-fit: fill;
        object-fit: fill;
   }
-  .container .hero-banner .background-man {
+  .home-container .hero-banner .background-man {
     height: 80%;
     width: 99%;
     top: 22.5%;

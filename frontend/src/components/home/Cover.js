@@ -12,6 +12,9 @@ export default function Cover(){
                 <h2 id="name">My Name is Greg</h2>
                 <h3 id="developer">Software Developer</h3>
                 <h1 id="welcome">Welcome to My Portfolio</h1>
+                <a href="#">
+                    <button className="btn cover-btn">Contact Me</button>
+                </a>
             </div>
             <span className="overlay"/>
             <div className="cover-container">

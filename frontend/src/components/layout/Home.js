@@ -29,21 +29,20 @@ export default function Home(){
         .fromTo("section.projects-container", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}); 
         
         let scene = new ScrollMagic.Scene({
-            triggerElement: ".container",
+            triggerElement: ".home-container",
             triggerHook: "onLeave",
             duration: "300%",
         })
         .setTween(timeline)
-        .setPin(".container")
+        .setPin(".home-container")
         .addTo(controller)
     },[])
 
     return (
-        <div className="container">
+        <div className="home-container">
             <Cover />
             <About />
             <Projects />
-            
         </div>
     )
 }

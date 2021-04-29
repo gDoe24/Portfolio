@@ -3,9 +3,28 @@ $secondary:#4CC9F0;
 $tertiary: #6e01c0;
 
 h1{
-    color: #5214E6;
+    color: $primary;
 }
-.container{
+.btn{
+    height: 2rem;
+    width: 7rem;
+    font-size: 16px;
+    background-color: $primary;
+    color: white;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    transition: all 0.25s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: $primary;
+        &:active:focus{
+            outline: 5px auto $primary;
+        }
+    }
+}
+.home-container{
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -44,6 +63,9 @@ h1{
             color: white;
             margin: 0;
             padding: 0;
+        }
+        .cover-btn{
+            margin: 1em auto 0 auto;
         }
     }
     .overlay{
@@ -156,6 +178,23 @@ h1{
             grid-template-columns: 1fr 1fr;
             ul{
                 list-style: none;
+                    li {
+                        position: relative;
+                        margin-top: .5em;
+                        padding-left: 15px;
+                        
+                        &::before{
+                        content: '';
+                        display: block;
+                        background-color: $primary;
+                        width: 10px;
+                        height: 2px;
+                        position: absolute;
+                        left: 0;
+                        top: calc(50% + 2px);
+                        transform: translateY(-50%);
+                    }
+                }
             }
         }
     }
@@ -289,12 +328,17 @@ h1{
         }
         .skills-container{
             .skills{
-                width: 50%;
-                padding-bottom: 20%;
+                width: 60%;
+                padding-bottom: 10%;
                 .skills-table{
                     display: grid;
                     ul{
-                        list-style: none;
+                        margin-top: 0;
+                        li{
+                            margin-top: .5em;
+                            width: 120%;
+                            padding-left: 20px;
+                        }
                     }
                 }
             }
@@ -302,7 +346,7 @@ h1{
     }
 }
 @media screen and (min-width:1400px){
-    .container{
+    .home-container{
         .hero-banner{
             .intro{
                 top: 15%;
@@ -314,6 +358,7 @@ h1{
                 }
                 #name{
                     font-size: 2em;
+                    
                 }
                 #developer{
                     font-size: 1.5em;
@@ -364,6 +409,12 @@ h1{
                 .skills-table{
                     display: grid;
                     margin-top: 1em;
+                    ul{
+                        margin-top: 2em;
+                        li{
+                            padding-left: 20px;
+                        }
+                    }
                 }
             }
         }
@@ -375,7 +426,7 @@ h1{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .container{
+    .home-container{
         .hero-banner{
             .intro{
                 top: 20%;
@@ -402,7 +453,7 @@ h1{
   and (max-device-width: 1024px) 
   and (orientation: landscape) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .container{
+    .home-container{
         .hero-banner{
             .intro{
                 #welcome{
@@ -424,7 +475,7 @@ h1{
   and (max-device-width: 1024px) 
   and (orientation: portrait) 
   and (-webkit-min-device-pixel-ratio: 2) {
-    .container{
+    .home-container{
         .hero-banner{
             .intro{
                 top: 30%;

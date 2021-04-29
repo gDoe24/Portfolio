@@ -19,16 +19,18 @@ export default function About(){
                     <span>Skills</span>
                     <div className="skills-table">
                         <ul className="skills-list-1">
+                            <li>HTML</li>
+                            <li>CSS/SASS</li>
                             <li>Python</li>
-                            <li>Python</li>
-                            <li>Python</li>
-                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
                         </ul>
                         <ul className="skills-list-2">
-                            <li>Python</li>
-                            <li>Python</li>
-                            <li>Python</li>
-                            <li>Python</li>
+                            <li>Git</li>
+                            <li>Test-Driven Development</li>
+                            <li>Flask/Django</li>
+                            <li>PostGresQl</li>
+                            <li>RESTful</li>
                         </ul>
                     </div>
                 </div>
