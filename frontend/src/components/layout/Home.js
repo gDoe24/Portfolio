@@ -3,6 +3,8 @@ import Cover from '../home/Cover';
 import About from '../home/About';
 import Projects from '../home/Projects';
 import '../../styles/home.scss';
+import '../../styles/main.scss';
+import Footer from './Footer';
 
 export default function Home(){
 
@@ -19,14 +21,16 @@ export default function Home(){
         .to('.background-man', 1, {y: -50}, '-=1')
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone}, '-=.75')  // in from bottom
-        .fromTo("section.projects-container", 1, {x: "120%"}, {x: "0%", ease: Linear.easeNone}) // in from right
+        .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
+        .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone})
         :
         timeline
         .to('.background-rock', 1, {y: -40})
         .to('.background-man', 1, {y: -35}, '-=1')
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "85%"}, {y: "0%", ease: Linear.easeNone}, '-=1')  // in from bottom
-        .fromTo("section.projects-container", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}); 
+        .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone})
+        .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone}); 
         
         let scene = new ScrollMagic.Scene({
             triggerElement: ".home-container",
@@ -43,6 +47,7 @@ export default function Home(){
             <Cover />
             <About />
             <Projects />
+            <Footer />
         </div>
     )
 }

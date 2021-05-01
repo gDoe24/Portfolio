@@ -257,7 +257,7 @@ h1 {
 .projects-container {
   background-color: turquoise;
   z-index: 5;
-  height: 120vh;
+  min-height: 100vh;
   max-height: auto;
   width: 100vw;
   padding-top: 10vh;
