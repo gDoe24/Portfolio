@@ -47,7 +47,21 @@ export default function Projects(){
                             className="project-card"
                             id={`project-${idx}`}
                             key={`project-${idx}`}>
-                            <h3 className="card-title">{project.title}</h3>
+                            <div className="card-img-cont">
+                                <img src={project.backdrop} />
+                            </div>
+                            <div className="card-info">
+                                <h3 className="card-title">{project.title}</h3>
+                                <p className="card-overview">{project.description}</p>
+                            </div>
+                            <div className="card-links">
+                                <a className="project-link" href="#">
+                                    Project
+                                </a>
+                                <a  className="github-link" href="#">
+                                    Github
+                                </a>
+                            </div>
                         </div>
                     )
                 })}

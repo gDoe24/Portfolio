@@ -20,18 +20,19 @@ export default function Home(){
         // Projects scroll from right if a desktop, otherwise from bottom
         let projectSect = document.querySelector('.projects');
         console.log(`projects: ${projectSect.offsetHeight}`);
-        let wH = window.innerHeight
+        let wH = window.innerHeight;
         console.log(`window: ${wH}`);
 
-        let extraSpace = projectSect.offsetHeight - wH + (wH * .3);
-        console.log(extraSpace);
+        let extraSpace = (projectSect.offsetHeight - wH) + (wH * .3);
+
         mql.matches == false ?
         timeline
         .to('.background-rock', 1, {y: -75})
         .to('.background-man', 1, {y: -50}, '-=1')
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone}, '-=.75')  // in from bottom
-        .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
+        .fromTo("section.projects-container", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
+        .to("section.about-container .blackout", 1, {opacity: 1}, '-=.8')
         .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
         .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone})
         :
@@ -41,6 +42,7 @@ export default function Home(){
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "85%"}, {y: "0%", ease: Linear.easeNone}, '-=1')  // in from bottom
         .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone})
+        .to("section.about-container .blackout", 1, {opacity: 1}, '-=.8')
         .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
         .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone}); 
         

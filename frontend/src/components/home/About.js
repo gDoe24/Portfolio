@@ -3,6 +3,7 @@ import React from 'react';
 export default function About(){
     return (
         <section className="about-container">
+            <div className="blackout"></div>
             <div className="about-me">
                 <div className="about-info">
                     <span>About Me</span>
