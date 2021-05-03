@@ -13,8 +13,18 @@ export default function Home(){
     
     const mql = window.matchMedia('(max-width: 420px)');
 
+    // Window.height 
+
+
     useEffect(() => {
         // Projects scroll from right if a desktop, otherwise from bottom
+        let projectSect = document.querySelector('.projects');
+        console.log(`projects: ${projectSect.offsetHeight}`);
+        let wH = window.innerHeight
+        console.log(`window: ${wH}`);
+
+        let extraSpace = projectSect.offsetHeight - wH + (wH * .3);
+        console.log(extraSpace);
         mql.matches == false ?
         timeline
         .to('.background-rock', 1, {y: -75})
@@ -22,6 +32,7 @@ export default function Home(){
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone}, '-=.75')  // in from bottom
         .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
+        .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
         .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone})
         :
         timeline
@@ -30,12 +41,13 @@ export default function Home(){
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "85%"}, {y: "0%", ease: Linear.easeNone}, '-=1')  // in from bottom
         .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone})
+        .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
         .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone}); 
         
         let scene = new ScrollMagic.Scene({
             triggerElement: ".home-container",
             triggerHook: "onLeave",
-            duration: "300%",
+            duration: "400%",
         })
         .setTween(timeline)
         .setPin(".home-container")
