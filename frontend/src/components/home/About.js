@@ -11,7 +11,7 @@ export default function About(){
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat. 
+                        nisi.
                     </p>
                 </div>
             </div>
@@ -36,6 +36,13 @@ export default function About(){
                     </div>
                 </div>
             </div>
+            <svg
+                className="divider" 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 1440 320">
+                <path fill="#6e01c0" fill-opacity="1"
+                d="M0,256L48,218.7C96,181,192,107,288,90.7C384,75,480,117,576,154.7C672,192,768,224,864,213.3C960,203,1056,149,1152,133.3C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
         </section>
     )
 }

@@ -32,7 +32,7 @@ export default function Home(){
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone}, '-=.75')  // in from bottom
         .fromTo("section.projects-container", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
-        .to("section.about-container .blackout", 1, {opacity: 1}, '-=.8')
+        .to("section.about-container .blackout", 1, {opacity: 1}, '-=.95')
         .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
         .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone})
         :
