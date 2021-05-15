@@ -215,22 +215,44 @@ h1{
 
 // PROJECTS
 .projects-container{
-    background-color: $tertiary;
+    background-color: white;
     z-index: 6;
     min-height: auto;
     width: 100vw;
     padding-top: 10vh;
     display: grid;
-    place-items: center;
+    
     .projects{
         width: 80%;
         height: 100%;
-        margin-top: 30vh;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin: 0 auto 0 auto;
+        .project-title{
+            
+            margin: 10vh auto 5vh auto;
+            width: 100%;
+            span{
+                color: $secondary;
+                font-size: 1rem;
+                position: relative;
+                padding-left: 45px;
+                &::before{
+                    content: '';
+                    display: block;
+                    background-color: $secondary;
+                    width: 35px;
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    top: calc(50% + 2px);
+                    transform: translateY(-50%);
+                }
+            }
+        }
         .project-card{
-            flex: 0 1 320px;
+            flex: 0 1 300px;
             height: 360px;
             margin: 1em;
             display: grid;
@@ -248,7 +270,7 @@ h1{
                 }
             }
             .card-info{
-                padding: .5em;
+                padding: .7em 1em .5em 1em;
                 .card-title{
                     color: $tertiary;
                     margin: 0 0 .5em 0;
@@ -258,7 +280,7 @@ h1{
                 }
             }
             .card-links{
-                padding: 0 0 .5em .5em;
+                padding: 0 0 .5em 1em;
                 a{
                     color: $secondary;
                     text-decoration: none;
@@ -376,7 +398,7 @@ h1{
         flex-wrap: wrap;
         span{
             color: $secondary;
-            font-size: 1rem;
+            font-size: 24px;
             position: relative;
             padding-left: 45px;
         }
@@ -416,13 +438,16 @@ h1{
     // PROJECTS
     .projects-container{
         .projects{
-            margin-top: 10vh;
-            .project-card{
-                flex: 0 1 450px;
-                height: 350px;
-                margin: 1em 3em 0 3em;                
+            .project-title{
+                span{
+                    font-size: 24px;
+                }
             }
-            
+            .project-card{
+                flex: 0 1 400px;
+                height: 350px;
+                margin: 1em 3em 1em 3em;                
+            }
         }
     }
 }
@@ -469,7 +494,7 @@ h1{
     // ABOUT ME
     .about-container{
         span{
-            font-size: 1rem;
+            font-size: 24px;
         }
         h2{
             margin-top: .8em;
@@ -506,9 +531,13 @@ h1{
     // PROJECTS
     .projects-container{
         .projects{
-            margin-top: 10vh;
+            .project-title{
+                span{
+                    font-size: 24px;
+                }
+            }
             .project-card{
-                flex: 0 1 450px;
+                flex: 0 1 400px;
                 height: 350px;
                 margin: 1em 3em 0 3em;                
             }

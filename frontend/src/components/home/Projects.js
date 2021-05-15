@@ -6,7 +6,7 @@ export default function Projects(){
     
     const array = [{
             "id": 0,
-            "title": "myVids Plus",
+            "title": "MyVids Plus",
             "backdrop": img1,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "github": "#",
@@ -14,7 +14,7 @@ export default function Projects(){
             },
             {
             "id": 1,
-            "title": "myVids Plus",
+            "title": "MyVids Plus",
             "backdrop": img1,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "github": "#",
@@ -22,7 +22,7 @@ export default function Projects(){
             },
             {
             "id": 2,
-            "title": "myVids Plus",
+            "title": "MyVids Plus",
             "backdrop": img1,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "github": "#",
@@ -30,7 +30,7 @@ export default function Projects(){
             },
             {
             "id": 3,
-            "title": "myVids Plus",
+            "title": "MyVids Plus",
             "backdrop": img1,
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "github": "#",
@@ -41,6 +41,9 @@ export default function Projects(){
     return (
         <section className="projects-container">
             <div className="projects">
+                <div className="project-title">
+                    <span>Projects</span>
+                </div>
                 {array.map((project, idx) => {
                     return(
                         <div 

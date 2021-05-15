@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Cover from '../home/Cover';
 import About from '../home/About';
 import Projects from '../home/Projects';
@@ -13,17 +13,18 @@ export default function Home(){
     
     const mql = window.matchMedia('(max-width: 420px)');
 
-    // Window.height 
-
+    const [extraSpace, setExtraSpace] = useState(undefined)
 
     useEffect(() => {
-        // Projects scroll from right if a desktop, otherwise from bottom
         let projectSect = document.querySelector('.projects');
-        console.log(`projects: ${projectSect.offsetHeight}`);
         let wH = window.innerHeight;
-        console.log(`window: ${wH}`);
+        setExtraSpace((projectSect.offsetHeight - wH) + (wH * .3))
 
-        let extraSpace = (projectSect.offsetHeight - wH) + (wH * .3);
+        window.addEventListener("resize", function(){
+            projectSect = document.querySelector('.projects');
+            wH = window.innerHeight;
+            setExtraSpace((projectSect.offsetHeight - wH) + (wH * .3));
+        })
 
         mql.matches == false ?
         timeline
@@ -32,7 +33,7 @@ export default function Home(){
         .fromTo('.background', {y: -50}, {y: 0, duration: 1}, '-=1')
         .fromTo("section.about-container",  1, {y:  "100%"}, {y: "0%", ease: Linear.easeNone}, '-=.75')  // in from bottom
         .fromTo("section.projects-container", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
-        .to("section.about-container .blackout", 1, {opacity: 1}, '-=.95')
+        .to("section.about-container .blackout", 1, {opacity: 1}, '-=.9')
         .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
         .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone})
         :
@@ -54,7 +55,7 @@ export default function Home(){
         .setTween(timeline)
         .setPin(".home-container")
         .addTo(controller)
-    },[])
+    },[extraSpace])
 
     return (
         <div className="home-container">
