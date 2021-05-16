@@ -1,4 +1,6 @@
-
+$primary: #5214E6;
+$secondary:#4CC9F0;
+$tertiary: #6e01c0;
 header{
     display: none;
 }
@@ -8,7 +10,121 @@ header{
     box-sizing: border-box;
 }
 .footer-container{
-    height: 20vh;
-    background-color: white;
+    height: auto;
+    background-color: black;
     z-index: 7;
+    .div-cont{
+        width: 100%;
+        padding-bottom: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .title{
+            flex: 1 1 300px;
+            padding-left: 5%;
+            display: flex;
+            padding: 7.5% 0 5% 10%;
+            justify-content: left;
+            align-items: center;
+            h1{
+                color: $secondary;
+                font-size: 36px;
+                font-weight: 700;
+            }
+        }
+        .ftr-sect-1{
+                height: 100%;
+                padding-left: 0;
+                flex: 1 1 30%;
+                padding-left: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            ul{
+                 .personal-li{
+                     list-style-type: none;
+                     margin-top: 1em;
+                     font-size: 1.3rem;
+                     a{
+                         color: white;
+                         text-decoration: none;
+                     }
+                 }
+            }  
+        }
+        .ftr-sect-2{
+            flex: 1 1 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            ul{
+                margin: auto 0 auto 0;
+                .portfolio-link{
+                    list-style-type: none;
+                    font-size: 1rem;
+                    margin-top: .75em;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width:1400px){
+    .footer-container{
+        .div-cont{
+            width: 50%;
+            height: 30vh;
+            .title{
+                flex: 1 1 350px;
+                padding-left: 5%;
+                display: flex;
+                padding: 7.5% 0 20% 0;
+                justify-content: center;
+                align-items: center;
+                h1{
+                    color: $secondary;
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+            }
+            .ftr-sect-1{
+                    height: 100%;
+                    flex: 1 1 30%;
+                    padding-left: 0;
+                    display: flex;
+                    align-items: center;
+                ul{
+                     .personal-li{
+                         list-style-type: none;
+                         margin-top: 1em;
+                         font-size: 1.3rem;
+                         a{
+                             color: white;
+                             text-decoration: none;
+                         }
+                     }
+                }  
+            }
+            .ftr-sect-2{
+                flex: 1 1 30%;
+                align-items: center;
+                padding-bottom: 7.5%;
+                ul{
+                    margin: auto 0 auto 0;
+                    .portfolio-link{
+                        margin-top: .75em;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
 }

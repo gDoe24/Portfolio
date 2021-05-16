@@ -13,7 +13,7 @@ export default function Home(){
     
     const mql = window.matchMedia('(max-width: 420px)');
 
-    const [extraSpace, setExtraSpace] = useState(undefined)
+    const [extraSpace, setExtraSpace] = useState(undefined);
 
     useEffect(() => {
         let projectSect = document.querySelector('.projects');
@@ -35,7 +35,7 @@ export default function Home(){
         .fromTo("section.projects-container", 1, {y: "110%"}, {y: "0%", ease: Linear.easeNone}) // in from bottom
         .to("section.about-container .blackout", 1, {opacity: 1}, '-=.9')
         .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
-        .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone})
+        .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "70%", ease: Linear.easeNone})
         :
         timeline
         .to('.background-rock', 1, {y: -40})
@@ -45,7 +45,7 @@ export default function Home(){
         .fromTo("section.projects-container", 1, {y: "120%"}, {y: "0%", ease: Linear.easeNone})
         .to("section.about-container .blackout", 1, {opacity: 1}, '-=.8')
         .to("section .projects", 1, {y: `-${extraSpace}px`, ease: Linear.easeNone})
-        .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "80%", ease: Linear.easeNone}); 
+        .fromTo("section.footer-container", 1, {y:  "110%"}, {y: "60%", ease: Linear.easeNone}); 
         
         let scene = new ScrollMagic.Scene({
             triggerElement: ".home-container",
@@ -55,7 +55,7 @@ export default function Home(){
         .setTween(timeline)
         .setPin(".home-container")
         .addTo(controller)
-    },[extraSpace])
+    },[])
 
     return (
         <div className="home-container">
